@@ -1,7 +1,7 @@
 Source: qtav
 Section: libs
 Priority: extra
-Maintainer: Sou Bunnbu <iyzsong@gmail.com>
+Maintainer: Yunusemre Şentürk <yunusemre.senturk@pardus.org.tr>
 Build-Depends: debhelper (>= 9),
  qt5-qmake, libqt5opengl5-dev, qtdeclarative5-dev,
  libavutil-dev,
@@ -17,7 +17,7 @@ Build-Depends: debhelper (>= 9),
  libva-dev,
  libegl1-mesa-dev,
  libuchardet-dev,
-Standards-Version: 3.9.5
+Standards-Version: 3.9.8
 Homepage: http://www.qtav.org
 
 Package: qtav-sdk
@@ -50,10 +50,9 @@ Description: FFmpeg powered multimedia playback SDK for Qt
 Package: libqtav11
 Architecture: any
 Multi-Arch: same
-Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Conflicts: libqtav, libqtav9 ,libqtav10
-Replaces: libqtav, libqtav9, libqtav10
+Conflicts: libqtav, libqtav9 ,libqtav10, libqtav18, libqtav19
+Replaces: libqtav, libqtav9, libqtav10, libqtav18, libqtav19
 Description: QtAV library
  QtAV is a multimedia playback library based on Qt and FFmpeg.
  It can help you to write a player with less effort than ever before.
@@ -63,7 +62,7 @@ Description: QtAV library
 Package: libqtavwidgets
 Architecture: any
 Multi-Arch: same
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, libqtav11,
 Description: QtAV Widgets module
  QtAV is a multimedia playback library based on Qt and FFmpeg.
  It can help you to write a player with less effort than ever before.
