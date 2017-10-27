@@ -1,0 +1,11 @@
+--- qtav-1.10.0.orig/src/libQtAV.pro
++++ qtav-1.10.0/src/libQtAV.pro
+@@ -569,7 +569,7 @@ mac {
+ unix:!android:!mac {
+ #debian
+ DEB_INSTALL_LIST = .$$[QT_INSTALL_LIBS]/libQt*AV.so.*
+-libqtav.target = libqtav.install
++libqtav.target = libqtav10.install
+ libqtav.commands = echo \"$$join(DEB_INSTALL_LIST, \\n)\" >$$PROJECTROOT/debian/$${libqtav.target}
+ QMAKE_EXTRA_TARGETS += libqtav
+ target.depends *= $${libqtav.target}
